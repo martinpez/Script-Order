@@ -62,17 +62,23 @@ def funcion_principal ():
                     pass
             else:
                     os.mkdir("Otros")
+                    continue
+            if os.path.exists("archivos programacion") == True:
+                    pass
+            else:
+                    os.mkdir("archivos programacion")
+                         
                     break
             
                         #Extenciones de imagenes
-            extencionesimagenes = r".png", r".jpg" , r".webp" , r".jpeg"
+            extencionesimagenes = r".png", r".jpg" , r".webp" , r".jpeg" ,r"PNG"
             imagenes = [_ for _ in os.listdir() if _.endswith(extencionesimagenes)]
                     
             for i in (imagenes):
                     shutil.move(i, "Imagenes")
                     
                         #Extenciones de Documentos Microsoft
-            extencionesMicrosft = r".xls", r".pptx" , r".doxc" , r".doc" , r".ppt"
+            extencionesMicrosft = r".xls", r".pptx" , r".docx" , r".doc" , r".ppt" , r".xlsx" 
             Dmicrosoft = [_ for _ in os.listdir() if _.endswith(extencionesMicrosft)]
                     
             for i in (Dmicrosoft):
@@ -97,7 +103,7 @@ def funcion_principal ():
 
 
                         #extenciones de exe
-            extencionesExe = r".exe"
+            extencionesExe = r".exe" r".msi"
             exe = [_ for _ in os.listdir() if _.endswith(extencionesExe)]
                     
             for i in (exe):
@@ -119,6 +125,16 @@ def funcion_principal ():
             for i in (Otros):
                     shutil.move(i, "Otros")
                     break            
+            
+                        #
+            archivosprogramacion = r".java"  , r".cpp" , r".py" , r".html" , r".js"
+            pdf = [_ for _ in os.listdir() if _.endswith(archivosprogramacion)]
+                    
+            for i in (pdf):
+                    shutil.move(i, "archivos programacion")
+
+
+
 def barra ():
     tareas = ["revicion","extencionesVarias", "extencionesRar", "extencionesExe", "extencionesPdf", "extencionesVideos","extencionesMicrosft","extencionesimagenes"]
     for i in tqdm(tareas):
@@ -154,5 +170,8 @@ while True:
                 else:
                         print("NO existe esa ruta")
                  
+
+
+
 
 
