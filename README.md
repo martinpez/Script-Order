@@ -2,7 +2,7 @@
 Script to organize files from any part of windows into folders by their extensions
 ## Installation
 
-Dowload the script i use the VS Code or Python.3.10 Pack software to compile. is very easy it use
+Dowload the script I use the VS Code or Python.3.10 Pack software to compile. is very easy it use
 
 ## Usage
 Dowload 
